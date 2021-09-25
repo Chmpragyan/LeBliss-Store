@@ -202,7 +202,7 @@ html{
 .login-sec{
     background: radial-gradient(rgb(255, 241, 241),#ffd6d6);
     /* height: 100vh; */
-    padding: 0 30px;
+    /* padding: 0 30px; */
 }
 .form{
     display: flex;
@@ -219,7 +219,7 @@ html{
 .login-col1 input{
     border: none;
     padding: 7px 0px;
-    width: 70%;
+    /* width: 70%; */
 }
 
 /* Column second of login page */
@@ -245,12 +245,10 @@ html{
 @media only screen and (max-width: 1000px){
     .form{
         flex-direction: column;
-        /* padding: 0; */
+        padding: 100px 30px;
     }
     .login-col1{
         width: 100%;
-
-        /* text-align: center; */
     }
     .login-col2{
         margin-top: 20px;
@@ -258,6 +256,12 @@ html{
         width: 100%;
     }
 
+}
+
+@media only screen and (max-width: 500px){
+    .login-sec{
+        width: 100%;
+    }
 }
 
 /* Contact Section */
