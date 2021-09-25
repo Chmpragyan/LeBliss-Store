@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navigation bar */
+.navBar{
+    display: flex;
+    background: radial-gradient(rgb(255, 241, 241),#ffd6d6);
+    position: sticky;
+    top: 0;
+}
+
+/* Logo in navbar */
+.navList .logo{
+    font-size: 20px;
+    font-weight: bold;
+}
+.navList .logo:hover{
+    border: none;
+}
+.navList span{
+    color: tomato;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* List of menu */
+.navBar .navList{
+    display: flex;
+    flex-basis: 60%;
+    align-items: center;
+    justify-content: center;
+}
+.navBar .navList li{
+    list-style-type: none;
+    padding: 15px 30px;
+}
+
+/* Links inside list */
+.navBar .navList a{
+    text-decoration: none;
+    color: black;
+}
+.navList a:hover{
+    border: 1px solid tomato;
+}
+
+/* Login button */
+.login{
+    align-items: center;
+    justify-content: center;
+    flex-basis: 30%;
+    text-align: right;
+    padding: 20px 0;
+} 
+.log-btn{
+    background-color: tomato;
+    padding: 5px 13px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+.log-btn a{
+    text-decoration: none;
+    color: white;
+}
+.log-btn:hover{
+	background: #563434;
+}
+
+/* For Hamburger icon */
+.burger{
+    width: 30px;
+    height: 20px;
+    margin: 22px 0px;
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    /* position: sticky;
+    top: 0; */
+}
+.bar{
+    width: 25px;
+    height: 3px;
+    background: black;
+    margin: 3px;
+}
+
+/* Responsive view */
+@media only screen and (max-width: 800px){
+    .navBar{
+        flex-direction: column;
+        height: 445px;
+        transition: all 1s ease-out;
+    }
+    .navList{
+        flex-direction: column;
+    }
+    .burger{
+        display: block;
+    }
+    .nav-height-resp{
+        height: 56px;
+    }
+    .visiblity-resp{
+        opacity: 0;
+    }
+    .login{
+        text-align: center;
+    }
+}
+
+/* Search-Bar */
+.search{
+    text-align: center; 
+    top: 55px;
+    position: sticky;
+    background: radial-gradient(rgb(255, 241, 241),#ffd6d6);
+}
+.search input{
+    padding: 20px 4px;
+    width: 55%;
+    border: none;
+    background: rgb(241, 239, 239);
+}
+
+/* Searcch icon */
+.search .fa{
+    background: tomato;
+    padding: 18px 18px;
+    color: black;
+    /* display: inline-block; */
+    cursor: pointer;
+}
+
+/* For home page */
+#homepage{
+    background: radial-gradient(#fff,#ffd6d6);
+    padding: 0 25px;
+    margin: auto;
+}
+
+/* Row of home page */
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* column of home page that is left column */
+.col-1{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+/* Image on the right */
+.col-1 img{
+   max-width: 100%;
+   padding: 50px 0;
+}
+
+/* Left side text at home page */
+.col-1 h1{
+    font-size: 40px;
+}
+
+/* Button */
+.col-1 .btn{
+    text-decoration: none;
+}
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    border-radius: 30px;
+    margin: 30px 0;
+    padding: 8px 22px;
+    transition: background 0.5s;
+}
+.btn:hover{
+	background: #563434;
+}
+
+/* Media query for home page */
+@media only screen and (max-width: 800px){
+    .col-1{
+        margin-top: 20px;
+    }
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/* For login page */
+.login-sec{
+    background: radial-gradient(rgb(255, 241, 241),#ffd6d6);
+    /* height: 100vh; */
+    padding: 0 30px;
+}
+.form{
+    display: flex;
+    padding: 100px 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Column first of login page */
+.login-col1{
+    /* flex-basis: 50%; */
+    width: 50%;
+}
+.login-col1 input{
+    border: none;
+    padding: 7px 0px;
+    width: 70%;
+}
+
+/* Column second of login page */
+.login-col2{
+    display: flex;
+    flex-direction: column;
+    /* flex-basis: 50%; */
+    width: 50%;
+    padding-left: 100px;
+}
+
+/* Links to social media */
+.social{
+    background: skyblue;
+    color: black;
+    text-decoration: none;
+    padding: 7px;
+    margin: 10px 0;
+    width: 90%;
+}
+
+
+@media only screen and (max-width: 1000px){
+    .form{
+        flex-direction: column;
+        /* padding: 0; */
+    }
+    .login-col1{
+        width: 100%;
+
+        /* text-align: center; */
+    }
+    .login-col2{
+        margin-top: 20px;
+        padding-left: 0;
+        width: 100%;
+    }
+
+}
+
+/* Contact Section */
+.contact-sec{
+    background: radial-gradient(rgb(255, 241, 241),#ffd6d6);
+}
+
+/* Contact heading */
+.contact-heading{
+    padding: 40px 0 0 0;
+    text-align: center;
+}
+
+/* Input section of contact page */
+.contact-col1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    margin: 40px 0;
+}
+.contact-col1 input{
+    padding: 15px 10px;
+    margin: 4px 0;
+    border: none;
+
+}
+.contact-col1 textarea{
+    border: none;
+    padding: 15px 10px;
+    margin: 4px 0;
+}
+
+
+/* Footer section */
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 30px 30px 10px 30px;
+    width: 100%;
+}
+.footer p{
+    color: #8a8a8a;
+    margin-bottom: 20px; 
+}
+.footer-col1, .footer-col2, .footer-col3{
+    min-width: 250px;
+    margin-bottom: 40px;
+}
+.footer-col1{
+    flex-basis: 40%;
+}
+.footer-col2{
+    /* flex: 1; */
+    flex-basis: 30%;
+}
+.footer-col3{
+    flex-basis: 30%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.logo span{
+    color: tomato;
+    font-weight: bold;
+    font-size: 30px;
+}
+.logo{
+    text-align: center;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+footer hr{
+    border: none;
+    background-color: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+@media only screen and (max-width: 800px){
+    .footer{
+        padding: 10px;
+    }
+    .footer-col1{
+        text-align: center;
+    }
+    .footer-col2{
+        width: 40%;
+    }
+}
